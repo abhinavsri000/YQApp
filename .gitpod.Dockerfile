@@ -1,5 +1,10 @@
-FROM gitpod/workspace-full
-                    
-USER gitpod
+FROM gitpod/workspace-full-vnc
 
-RUN sudo apt-get -q update && #     sudo apt-get install -yq react-native-cli && #     sudo rm -rf /var/lib/apt/lists/*
+# Install Electron dependencies.
+RUN sudo apt-get update \
+ && sudo apt-get install -y \
+  libasound2-dev \
+  libgtk-3-dev \
+  libnss3-dev \
+  react-native-cli\
+ && sudo rm -rf /var/lib/apt/lists/*
