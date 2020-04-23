@@ -1,10 +1,12 @@
 FROM gitpod/workspace-full-vnc
 
 # Install Electron dependencies.
-RUN sudo apt-get update \
+RUN sudo add-apt-repository universe \
+ && sudo apt-get update \
  && sudo apt-get install -y \
+  android-tools-adb \
+  android-tools-fastboot \
   libasound2-dev \
   libgtk-3-dev \
   libnss3-dev \
-  react-native-cli\
  && sudo rm -rf /var/lib/apt/lists/*
