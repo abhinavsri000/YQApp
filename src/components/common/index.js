@@ -2,6 +2,7 @@ export * from './RegisterHeader';
 export * from './RegisterCard';
 export * from './LoginGoogle';
 export * from './Form';
+export * from './RegisterForm';
 export * from './InputField';
 export * from './RadioButton';
 export * from './CommonButton';

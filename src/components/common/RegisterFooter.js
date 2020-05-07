@@ -1,9 +1,9 @@
 import React from 'react';
 import { TouchableOpacity, Text, View} from 'react-native';
 
-const RegisterFooter = ({footerText,footerButton}) => {
+const RegisterFooter = ({footerText,footerButton, marginView}) => {
   return (
-    <View style = {{margin:10, justifyContent:'center', alignItems:'center',flexDirection:'row'}}>
+    <View style = {{margin: marginView , justifyContent:'center', alignItems:'center',flexDirection:'row'}}>
     <TouchableOpacity >
     <View style = {{flexDirection:'row'}}>
       <Text style= {[styles.textStyle, {color: '#A3A3A3'}]}>

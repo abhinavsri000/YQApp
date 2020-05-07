@@ -9,10 +9,10 @@ class Login extends Component {
     return (
       <ScrollView>
         <RegisterHeader headerTitle="Login" headerText="Please login to continue using our app"/>
-        <RegisterCard sampleText="Login via social networks" bottomText="or login with email"/>
+        <RegisterCard marginSample= {45} googleText="Login with" sampleText="Login via social networks" bottomText="or login with email"/>
         <Form />
-        <CommonButton />
-        <RegisterFooter footerText='Don’t have an acoount ?' footerButton='Signup' />
+        <CommonButton marginButton={45} buttonTitle = "Login"/>
+        <RegisterFooter footerText="Don’t have an acoount ?" footerButton="Signup" marginView = {10} />
       </ScrollView>
     );
   }

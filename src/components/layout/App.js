@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 
 import Login from './Login';
+import Signup from './Signup';
 
 const App: () => React$Node = () => {
-  return <Login />;
+  return <Signup />;
 };
-
 
 export default App;

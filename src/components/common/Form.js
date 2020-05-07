@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, View, TextInput, Text} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { InputField, RadioButton } from '.';
 
 class Form extends Component {
@@ -7,9 +7,9 @@ class Form extends Component {
   const {container} = styles;
   return (
     <View style={container} >
-      <InputField hintText = 'Email' mar={0} secureEnable = {false} />
-      <InputField hintText = 'Password'mar={16}  secureEnable = {true} />
-      <RadioButton radioText = "Remember Me"/>
+      <InputField hintText = 'Email' mar={0} inputHeight={45} secureEnable = {false} />
+      <InputField hintText = 'Password'mar={16} inputHeight={45} secureEnable = {true} />
+      <RadioButton radioText = "Remember Me" forgotText= "Forgot Password?" flexValue = {0.7} flexforgotValue={0.7}/>
     </View>
 
   );

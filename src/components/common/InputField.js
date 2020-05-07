@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
 
-const InputField = ({hintText, secureEnable, mar}) => {
+const InputField = ({hintText, secureEnable, mar, inputHeight}) => {
 
   const {inputStyle} = styles;
 
   return(
-    <TextInput style={[inputStyle, {marginTop: mar}]}
+    <TextInput style={[inputStyle, {marginTop: mar, height: inputHeight}]}
       placeholder = {hintText}
       placeholderTextColor = '#979797'
       secureTextEntry = {secureEnable}
@@ -19,7 +19,6 @@ const InputField = ({hintText, secureEnable, mar}) => {
 const styles = StyleSheet.create({
   inputStyle: {
     borderWidth: 1.5,
-    height: 45,
     fontSize: 18,
     width: 320,
     marginLeft: 10,

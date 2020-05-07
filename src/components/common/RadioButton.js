@@ -16,12 +16,12 @@ class RadioButton extends Component {
             onPress={() => this.setState({checked: !this.state.checked})}
           />
         </View>
-        <View style={{marginTop: 8,flex: 0.7, justifyContent: 'center', alignItems:'flex-start'}} >
+        <View style={{marginTop: 8,flex: this.props.flexValue, justifyContent: 'center', alignItems:'flex-start'}} >
           <Text style={styles.textStyle}> {this.props.radioText}</Text>
         </View>
-        <View style={{marginTop: 8,marginRight:6,flex: 0.7, justifyContent: 'center', alignItems:'flex-end'}}>
+        <View style={{marginTop: 8,marginRight:6,flex: this.props.flexforgotValue, justifyContent: 'center', alignItems:'flex-end'}}>
             <TouchableOpacity >
-              <Text style= {styles.textStyle}> Forgot Password? </Text>
+              <Text style= {styles.textStyle}> {this.props.forgotText} </Text>
             </TouchableOpacity>
           </View>
         </View>
