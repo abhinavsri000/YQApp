@@ -10,9 +10,10 @@ import {
 
 import Login from './Login';
 import Signup from './Signup';
+import Checkout from './Checkout';
 
 const App: () => React$Node = () => {
-  return <Signup />;
+  return <Checkout />;
 };
 
 export default App;
