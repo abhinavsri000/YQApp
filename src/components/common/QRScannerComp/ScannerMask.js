@@ -6,8 +6,10 @@ export default function ScannerMask({ overlayColor, frameColor, frameFlexHeight,
     return(
         <View style={{ flex: 1, width: wp('100%'), alignItems: "center", justifyContent: "center" }}>
             <View style={{ flex: 1, backgroundColor: overlayColor, width: wp('100%'), alignItems: "center" }}>
-                <Text style={{ fontSize: 18, marginTop: 10, color: 'white' }}>{titleText}</Text>
-                <Text style={{ fontSize: 12, marginTop: 5, color: 'white' }} >{subtitleText}</Text>
+               <View style={{width: wp('70%')}}>
+                    <Text style={{ fontSize: 18, marginTop: 10, color: 'white', textAlign: "center" }}>{titleText}</Text>
+                    <Text style={{ fontSize: 12, marginTop: 5, color: 'white', textAlign: "center" }} >{subtitleText}</Text>
+               </View>
             </View>
             <View style={{ flex: frameFlexHeight, flexDirection: 'row' }}>
                 <View style={{ flex: 1, backgroundColor: overlayColor }} />

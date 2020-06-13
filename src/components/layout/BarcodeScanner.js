@@ -10,6 +10,7 @@ import { RNCamera as Camera } from 'react-native-camera';
 import ContinueButton from '../common/QRScannerComp/ContinueButton';
 import SearchBar from '../common/HomeComp/SearchBar';
 import BarcodeMask from '../common/BarcodeComp/BarcodeMask';
+import ScannerMask from '../common/QRScannerComp/ScannerMask';
 import { Button } from 'react-native-elements';
 
 export default class QRScanner extends Component {
@@ -28,7 +29,7 @@ export default class QRScanner extends Component {
             <View style={styles.container}>
                 
                 
-                <SearchBar />
+                <SearchBar placeholder="Enter broduct Barcode" />
                 <View style={ styles.camera } >
                     <Camera
                         style={styles.preview}
@@ -37,11 +38,19 @@ export default class QRScanner extends Component {
                         ref={cam => this.camera = cam}
                     // aspect={Camera.Constants.Aspect.fill}
                     >                        
-                     <BarcodeMask frameColor='red' frameWidth={wp('60%')}/>   
+                     {/* <BarcodeMask frameColor='red' frameWidth={wp('60%')}/>    */}
+                        <ScannerMask
+                            overlayColor='rgba(0,0,0,0.5)'
+                            frameColor='red'
+                            frameFlexWidth={3}
+                            frameFlexHeight={1.3}
+                            // titleText="Scan the Store's QR Code"
+                            subtitleText='Please scan QR/Barcode and press continue button to see the related product'
+                            textBelow='Scanning...'
+                        />
                     </Camera>
                 </View>
-                <Text style={{textAlign:"center", width: wp('80%')}}>Please scan QR/Barcode and press continue button to see the related product</Text>
-                <View style={{ flex:1, alignItems:"flex-end", flexDirection:"row", width: wp('80%'), marginBottom: hp('10%')}}>
+                <View style={{ flex:1, alignItems:"flex-end", flexDirection:"row", width: wp('80%'), marginBottom: hp('16%')}}>
                     <Button
                         title="QR/Barcode"
                         titleStyle={{color:'#000'}}
@@ -82,9 +91,9 @@ const styles = StyleSheet.create({
         // flexDirection: 'row',
     },
     camera: {
-        marginVertical: hp('15%'),
+        marginVertical: hp('0%'),
         // flex:1,
-        height: hp('20%'),
+        height: hp('60%'),
         overflow: "hidden"
     },
     preview: {

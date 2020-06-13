@@ -7,21 +7,21 @@ import Icon from 'react-native-vector-icons/Ionicons';
 export default class PayButton extends Component {
     render() {
         return(
-            <View style={styles.btn}>
+            <TouchableOpacity style={styles.btn} >
                 <View style={{ flexDirection: "row", marginVertical: hp('2%'), marginHorizontal: wp('8%'), alignItems:"center" }}>
                     <View style={{ flex: 1, alignItems: "flex-start" }}>
                         <View style={{ alignItems: "center" }}>
-                            <Text style={{ fontSize: 16, color:'#e0e0e0' }}>Total: ₹ {this.props.total}</Text>
+                            <Text style={{ fontSize: 16, color:'#e0e0e0' }}>Amount: ₹ {this.props.total}</Text>
                         </View>
                     </View>
                     <View style={{ flex: 1, alignItems: "flex-end" }} >
-                        <TouchableOpacity style={{ alignItems: "center", flexDirection: "row" }} >
+                        <View style={{flexDirection: "row", alignItems:"baseline"}}>
                             <Text style={{ fontSize: 20, color: '#FFF', marginRight: wp('5%') }}>Pay</Text>
                             <Icon name="ios-arrow-forward" color="#FFF" size={20} />
-                        </TouchableOpacity>
+                        </View>
                     </View>
                 </View>
-            </View>
+            </TouchableOpacity>
         );
     }
 }
