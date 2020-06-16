@@ -23,7 +23,13 @@ export default class ProductImage extends Component {
                 }}>
                     <Image
                         source={ this.props.image_1 }
-                        style={styles.image} />
+                        style={styles.image}
+                        resizeMode='stretch' />
+                    <View style={[styles.badge, { opacity: this.props.new1 || 0 }]} >
+                        <Text style={styles.BadgeText}>
+                            New
+                        </Text>
+                    </View>
                 </View>
                 <View style={{
                     height: hp('25%'),
@@ -34,8 +40,9 @@ export default class ProductImage extends Component {
                 }}>
                     <Image
                         source={ this.props.image_2 }
-                        style={styles.image} />
-                    <View style={styles.badge} >
+                        style={styles.image}
+                        resizeMode='stretch' />
+                    <View style={[styles.badge, { opacity: this.props.new2 || 0 }]} >
                         <Text style={styles.BadgeText}>
                             New
                         </Text>
@@ -50,8 +57,7 @@ const styles = StyleSheet.create({
     image: {
         width: wp('40%'),
         height: hp('25%'),
-        borderRadius: 10,
-        resizeMode: 'stretch'
+        borderRadius: 10
     },
 
     badge: {

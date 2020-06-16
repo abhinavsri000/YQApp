@@ -29,7 +29,8 @@ export default class BBHome extends Component {
                     }}>
                         <ProductImage
                             image_1={require("../../assets/Image_5.jpg")}
-                            image_2={require("../../assets/Image_5.jpg")} />
+                            image_2={require("../../assets/Image_5.jpg")}
+                            new2={1} />
                         <ProductImage
                             image_1={require("../../assets/Image_5.jpg")}
                             image_2={require("../../assets/Image_5.jpg")} />
