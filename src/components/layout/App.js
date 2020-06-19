@@ -18,9 +18,10 @@ import Payment from './Payment';
 import Profile from './Profile';
 import OTP from './OTP';
 import Receipt from './Receipt';
+import MyOrders from './MyOrders';
 
 const App: () => React$Node = () => {
-  return <Receipt />;
+  return <MyOrders />;
 };
 
 export default App;
