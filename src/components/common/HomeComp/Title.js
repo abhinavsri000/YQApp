@@ -10,15 +10,11 @@ export default class Title extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{
-                    flexDirection: "row", alignItems: "flex-start", justifyContent: 'flex-start'
-                }}>
-                    <View style={{ flex: 1, alignItems: "flex-start" }}>
-                        <Text style={styles.title}>{this.props.title}</Text>
-                    </View>
-                    <View style={{ flex: 1, alignItems: "flex-end" }}>
-                        <Text style={styles.option}>{this.props.option}</Text>
-                    </View>
+                <View style={{ flex: 1, alignItems: "flex-start" }}>
+                    <Text style={styles.title}>{this.props.title}</Text>
+                </View>
+                <View style={{ flex: 1, alignItems: "flex-end" }}>
+                    <Text style={styles.option}>{this.props.option}</Text>
                 </View>
             </View>
         );
@@ -27,8 +23,10 @@ export default class Title extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: '5%',
-        width: wp('90%')
+        marginTop: '7%',
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center"
     },
 
     title: {

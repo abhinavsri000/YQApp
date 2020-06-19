@@ -7,7 +7,8 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-import BottomButton from './BottomButton';
+import CenterSemicircle from './CenterSemicircle';
+import FloatButton from '../ShoppingListComp/FloatButton';
 
 export default class BottomNavigation extends Component {
     render() {
@@ -29,7 +30,8 @@ export default class BottomNavigation extends Component {
                         <Text style={{ color: '#bdbdbd' }}>Todo</Text>
                     </View>
                 </View>
-
+                <FloatButton icon={this.props.icon} />
+                <CenterSemicircle />
                 <View style={[styles.common, styles.Filler_1]}></View>
                 <View style={[styles.common, styles.Filler_2]}></View>
                 <View style={[styles.common, styles.Filler_3]}></View>
@@ -40,7 +42,7 @@ export default class BottomNavigation extends Component {
                 <View style={[styles.common, styles.Filler_2]}></View>
                 <View style={[styles.common, styles.Filler_1]}></View>
 
-                <BottomButton icon={this.props.icon} />
+                
                 <View style={[styles.Container, { borderTopLeftRadius: 10 }]}>
                     <View style={ styles.ContainerItems }>
                         <Icon
@@ -65,18 +67,22 @@ export default class BottomNavigation extends Component {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        height: hp('8%'),
-        width: wp('100%'),
+        // height: hp('8%'),
+        // width: wp('100%'),
+        height: '8%',
+        width: '100%',
         position: 'absolute',
-        bottom: 0
+        bottom: 0,
+        backgroundColor: 'white'
     },
 
     Container: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         backgroundColor: '#ffffff',
-        height: hp('8%'),
-        width: wp('41.5%'),
+        //height: hp('8%'),
+        //width: wp('41.5%'),
+        width: '41.2%',
         elevation: 100
     },
 

@@ -9,21 +9,15 @@ import {
 } from 'react-native';
 import { Card } from 'react-native-elements';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import Title from './Title';
 
 const width = Dimensions.get('window').width;
 
 export default class ShoppingList extends Component {
     render() {
         return (
-            <View style={{marginBottom: 5}}>
-                <View style={{flex:1, flexDirection: "row", alignItems:"center"}}>
-                    <View style={{ flex: 1, alignItems:"flex-start" }}>
-                        <Text style={styles.title}>{this.props.title}</Text>
-                    </View>
-                    <View style={{ flex: 1, alignItems: "flex-end" }}>
-                        <Text style={styles.option}>{this.props.option}</Text>
-                    </View>
-                </View>
+            <View style={{ flex: 1, width: '95%', marginBottom: 5 }}>
+                <Title title={this.props.title} option={this.props.option} />
                 <ScrollView horizontal={true} contentContainerStyle={{}}>
                     <Card containerStyle={{ padding: 0, borderRadius: 10, paddingRight: 0 }}>
                         <Image
