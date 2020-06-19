@@ -17,7 +17,7 @@ export default class Search extends Component {
         return (
             <View style={styles.container} >
                 <SearchBar
-                    containerStyle={styles.SearchContainer}
+                    containerStyle={[ styles.SearchContainer, { width: this.props.length || Dimensions.get('window').width * 0.9 } ]}
                     searchIcon={{
                         size: 25,
                         backgroundColor: '#ffffff'
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
 
     SearchContainer: {
         height: 45,
-        width: Dimensions.get('window').width * 0.9,
         backgroundColor: '#ffffff',
         borderTopWidth: 0,
         borderBottomWidth: 0,
