@@ -4,7 +4,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { Card, Image } from 'react-native-elements';
 import Stepper from './Stepper';
 
-export default class Cart extends Component {
+export default class CartCard extends Component {
     render() {
         return (
             <Card containerStyle={styles.myCard}>

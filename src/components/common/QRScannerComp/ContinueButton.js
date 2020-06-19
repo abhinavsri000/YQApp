@@ -9,7 +9,7 @@ export default function ContinueButton({ title, buttonColor, iconName, iconSize,
             title={title}
             type="solid"
             containerStyle={{ position: "absolute", bottom: 20, borderRadius: 30, width: width, elevation: 2}}
-            buttonStyle={{ backgroundColor: buttonColor, paddingVertical: 12}}
+            buttonStyle={{ backgroundColor: buttonColor, paddingVertical: hp('2.2%')}}
             icon={
                 <Icon
                     name={iconName}

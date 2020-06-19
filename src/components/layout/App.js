@@ -14,9 +14,13 @@ import Checkout from './Checkout';
 import Cart from './Cart';
 import BarcodeScanner from './BarcodeScanner';
 import QRScanner from './QRScanner';
+import Payment from './Payment';
+import Profile from './Profile';
+import OTP from './OTP';
+import Receipt from './Receipt';
 
 const App: () => React$Node = () => {
-  return <Checkout />;
+  return <Receipt />;
 };
 
 export default App;
