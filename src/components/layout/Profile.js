@@ -12,26 +12,36 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../common/Header';
 import { InputField } from '../common/ProfileComp/InputField';
 import ContinueButton from '../common/QRScannerComp/ContinueButton';
+import LinearGradient from 'react-native-linear-gradient';
 
-export default class Profile extends Component{
+export default class Profile extends Component {
     render() {
-        return(
+        return (
             <View>
                 <Header header="Profile" />
-                <View style={{ alignItems: "center" }}>
-                    <InputField width={wp('85%')} label="Name" />
-                    <InputField width={wp('85%')} label="Adddress" />
-                    <InputField width={wp('85%')} label="City" />
-                    <InputField width={wp('85%')} label="Gender" />
-                    <InputField width={wp('85%')} label="Email" />
-                    <InputField width={wp('85%')} label="Phone Number" />
-                    <ContinueButton width={wp('90%')} title="SAVE" buttonColor='#1e88e5' />
-                </View>
-            </View>                
+                <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+                    <Text style={styles.buttonText}>
+                        Sign in with Facebook
+                    </Text>
+                </LinearGradient>
+            </View>
         );
     }
 }
 
-const styles=StyleSheet.create({
-    
+const styles = StyleSheet.create({
+    linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5
+  },
+  buttonText: {
+    fontSize: 18,
+    fontFamily: 'Gill Sans',
+    textAlign: 'center',
+    margin: 10,
+    color: '#ffffff',
+    backgroundColor: 'transparent',
+  },
 });

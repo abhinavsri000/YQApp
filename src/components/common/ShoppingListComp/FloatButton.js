@@ -8,7 +8,7 @@ export default class FloatButton extends Component {
     render() {
         return (
             <View style={{
-                position: 'absolute',
+                // position: 'absolute',
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: hp('8%'),

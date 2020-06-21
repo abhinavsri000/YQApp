@@ -15,13 +15,15 @@ import Cart from './Cart';
 import BarcodeScanner from './BarcodeScanner';
 import QRScanner from './QRScanner';
 import Payment from './Payment';
-import Profile from './Profile';
+import EditProfile from './EditProfile';
 import OTP from './OTP';
 import Receipt from './Receipt';
 import MyOrders from './MyOrders';
+import CreateList from './CreateList';
+import Profile from './Profile';
 
 const App: () => React$Node = () => {
-  return <MyOrders />;
+  return <Profile />;
 };
 
 export default App;

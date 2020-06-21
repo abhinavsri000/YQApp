@@ -22,7 +22,6 @@ export default class GradientButton extends Component {
             }}
             containerStyle={{
                 width: this.props.length || '75%',
-                
                 marginVertical: '1%'
             }}
         />

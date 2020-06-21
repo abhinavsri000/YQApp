@@ -28,6 +28,6 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
     Header: {
         marginHorizontal: wp('4%'),
-        fontSize: 28
+        fontSize: 24
     }
 });
