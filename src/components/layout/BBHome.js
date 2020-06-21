@@ -12,6 +12,7 @@ import Categories from '../common/BBHomeComp/Categories';
 import Title from '../common/HomeComp/Title';
 import ProductImage from '../common/BBHomeComp/ProductImage';
 import BottomNavigation from '../common/HomeComp/BottomNavigation';
+import CustomOverlay from '../common/BBHomeComp/Overlay';
 
 export default class BBHome extends Component {
     render() {
@@ -40,6 +41,9 @@ export default class BBHome extends Component {
                     </View>
                 </ScrollView>
                 <BottomNavigation option3="Cart" icon3="cart-outline" icon="qrcode-scan" />
+                <CustomOverlay
+                    image={require("../../assets/Image_8.jpg")}
+                    title="Big Bazaar" />
             </View>
         );
     }
