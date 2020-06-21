@@ -10,13 +10,14 @@ export default class CustomButton extends Component<{}> {
                 raised
                 title={this.props.title}
                 titleStyle={{
-                    fontSize: 18,
+                    fontSize: this.props.titlesize || 18,
                     color: this.props.titlecolor || '#ffffff'
                 }}
                 containerStyle={{
                     alignSelf: 'center',
                     marginVertical: '2%',
                     width: this.props.length || wp('80%'),
+                    marginHorizontal: '2%'
                 }}
                 buttonStyle={{
                     height: this.props.size || 50,

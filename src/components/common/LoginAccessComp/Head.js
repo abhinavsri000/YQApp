@@ -25,7 +25,7 @@ export default class Head extends Component<{}> {
                         size={25} />
                 </TouchableOpacity>
                 <Text style={{
-                    fontSize: 30,
+                    fontSize: 25,
                     fontWeight: "bold"
                 }}>
                     {this.props.title}

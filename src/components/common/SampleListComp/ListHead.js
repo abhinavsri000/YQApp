@@ -8,8 +8,9 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
+import Search from '../HomeComp/SearchBar';
 
-export default class ShoppingHead extends Component {
+export default class ListHead extends Component {
     render() {
         return (
             <View>
@@ -20,18 +21,24 @@ export default class ShoppingHead extends Component {
                     alignItems: 'center',
                     justifyContent: 'flex-start'
                 }}>
-                    <TouchableOpacity style={{ marginRight: 10, backgroundColor: 'red' }}>
+                    <TouchableOpacity style={{ marginRight: 10 }}>
                         <Icon
                             name="arrowleft"
+                            color="#ffffff"
                             size={33} />
                     </TouchableOpacity>
+                    <Search placeholder={this.props.placeholder} length={wp('80%')} />
+                </View>
+                <View>
                     <Text style={{
-                        alignSelf: 'baseline',
-                        fontSize: 25,
-                        fontWeight: "bold"
+                        fontSize: 30,
+                        fontWeight: "bold",
+                        color: "#ffffff",
+                        marginTop: '5%',
+                        marginLeft: '5%'
                     }}>
-                        Shopping List
-                </Text>
+                        {this.props.listname}
+                    </Text>
                 </View>
             </View>
         );
