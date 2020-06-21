@@ -17,10 +17,12 @@ export default class GradientButton extends Component {
                 fontSize: 18
             }}
             buttonStyle={{
-                width: this.props.length || '75%',
+                height: this.props.height,
                 justifyContent: 'space-evenly'
             }}
             containerStyle={{
+                width: this.props.length || '75%',
+                
                 marginVertical: '1%'
             }}
         />
