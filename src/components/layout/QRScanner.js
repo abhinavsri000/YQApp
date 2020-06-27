@@ -8,13 +8,14 @@ import {
     Image,
     ScrollView
 } from 'react-native';
-import { Header, Avatar } from 'react-native-elements';
+import { Avatar } from 'react-native-elements';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { RNCamera as Camera } from 'react-native-camera';
 import ScannerMask from '../common/QRScannerComp/ScannerMask';
 import ContinueButton from '../common/QRScannerComp/ContinueButton';
 import RecentsAvatar from '../common/QRScannerComp/RecentsAvatar';
 import SearchBar from '../common/HomeComp/SearchBar';
+import Header from '../common/Header';
 
 export default class QRScanner extends Component {
     constructor(props) {
@@ -30,12 +31,7 @@ export default class QRScanner extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header
-                    leftComponent={{ icon: 'arrow-forward', color: '#fff' }}
-                    centerComponent={{ text: 'Scan Item', style: { color: '#fff' } }}
-                    containerStyle={{ margin: 0 }}
-                />
-                
+                <Header header="YQ Store Login" />
                 <View>
                     <SearchBar />
                     <View style={{padding: 10}} >
@@ -67,15 +63,15 @@ export default class QRScanner extends Component {
                             subtitleText='Align QR code within frame to scan'
                             textBelow='Scanning...'
                         />
-                        <ContinueButton title="Continue" buttonColor='#3f51b5' width={wp('80%')} />
+                        <ContinueButton title="Continue" buttonColor='#3f51b5' width={wp('80%')} screenName="BBHome" />
                     </Camera>
                 </View>
-                <View style={styles.bottomOverlay}>
+                {/* <View style={styles.bottomOverlay}> */}
                     {/* <TouchableOpacity onPress={() => this.handleTourch(this.state.torchOn)}>
                         <Image style={styles.cameraIcon}
                             source={this.state.torchOn === true ? require('../../assets/flasher_on.png') : require('../../assets/flasher_off.png')} />
                     </TouchableOpacity> */}
-                </View>
+                {/* </View> */}
             </View>
         )
     }
@@ -97,7 +93,7 @@ const styles = StyleSheet.create({
     },
     camera: {
         // flex:1,
-        height: hp('57%'),
+        height: hp('55%'),
         width: wp('100%'),
         overflow: "hidden"
     },

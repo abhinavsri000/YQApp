@@ -3,9 +3,15 @@ import { View } from 'react-native';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { useNavigation } from '@react-navigation/native';
 
 export default class FloatButton extends Component {
+    constructor(props){
+        super(props)
+    }
     render() {
+        // console.log(this.props.navigation)
+        // const navigation = useNavigation();
         return (
             <View style={{
                 // position: 'absolute',
@@ -32,6 +38,7 @@ export default class FloatButton extends Component {
                             color='#ffffff'
                         />
                     }
+                    onPress={() => this.props.navigation.navigate('this.props.screenName')}
                 />
             </View>
         );

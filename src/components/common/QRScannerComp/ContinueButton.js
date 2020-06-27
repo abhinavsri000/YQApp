@@ -2,8 +2,10 @@ import React from 'react';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { useNavigation } from '@react-navigation/native';
 
-export default function ContinueButton({ title, titleColor, buttonColor, bottom, iconName, iconSize, iconColor, width, elevation }) {
+export default function ContinueButton({ screenName, title, titleColor, buttonColor, bottom, iconName, iconSize, iconColor, width, elevation }) {
+    const navigation = useNavigation();
     return (
         <Button
             title={title}
@@ -19,6 +21,7 @@ export default function ContinueButton({ title, titleColor, buttonColor, bottom,
                     style={{paddingRight: 15}}
                 />
             }
+            onPress={() => navigation.push(screenName)}
         />
     );
 }

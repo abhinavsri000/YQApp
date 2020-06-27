@@ -11,12 +11,14 @@ import { Card, Divider } from 'react-native-elements';
 import Coupon from '../common/CheckoutComp/Coupon';
 import PayButton from '../common/CheckoutComp/PayButton';
 import ItemDetails from '../common/CheckoutComp/ItemDetails';
+import Header from '../common/Header';
 
 export default class Checkout extends Component {
     render() {
         return (    
             <View style={{ flex: 1 }}>
-                <Text style={styles.title}>Checkout</Text>
+                {/* <Text style={styles.title}>Checkout</Text> */}
+                <Header header="Checkout" />
                 
                 <ScrollView contentContainerStyle={{ paddingBottom: hp('10%') }}>
                     <Card containerStyle={{paddingHorizontal: wp('1%')}}>

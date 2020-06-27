@@ -9,18 +9,18 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { Card, Divider, Button, Image } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 import UpiButton from '../common/PaymentComp/UpiButton';
+import SaveInfo from '../common/PaymentComp/SaveInfo';
 import { InputField } from '../common/PaymentComp/InputField';
 import ContinueButton from '../common/QRScannerComp/ContinueButton';
-// import SliderButton from 'react-native-slider-button';
-
-// var SliderButton = require("react-native-slider-button");
+import Header from '../common/Header';
 
 export default class Payment extends Component {
     render() {
         return(
             <View style={{flex:1, alignItems:"center" }}>
                 <View style={{backgroundColor: '#eeeeee', height: '15%', width: '100%', justifyContent:"center"}}>
-                    <Text style={{fontWeight:"bold", marginLeft: wp('5%'), fontSize: 22}}>Payment</Text>
+                    {/* <Text style={{fontWeight:"bold", marginLeft: wp('5%'), fontSize: 22}}>Payment</Text> */}
+                    <Header header="Payment" />
                 </View>
                 <View style={{margin:0}}>
                     <Text style={styles.titles}>Payment Methods</Text>
@@ -58,17 +58,8 @@ export default class Payment extends Component {
                             </View>
                         </View>
                         <InputField label='Card holder name' width={wp('90%')} />
-                        <Text style={{marginLeft: wp('1%'), fontSize: 16}}>Save card information</Text>
                         
-                        {/* <SliderButton
-                        text={"Slide to start!"}
-                        textAnimated={true}
-                        minimumValue={0} maximumValue={100} value={0}
-                        minimumTrackTintColor={"rgba(0,0,0,0)"}
-                        maximumTrackTintColor={"rgba(0,0,0,0)"}
-                        onTrigger={this.onBurnOffStart}
-                        /> */}
-
+                        <SaveInfo/>
                     </View>
                 </View>
                 <Divider style={{}} />
@@ -84,7 +75,7 @@ export default class Payment extends Component {
                         </View>
                     </View>
                 </View>
-                <ContinueButton title="PAY NOW" buttonColor='#1e88e5' width={wp('90%')} />
+                <ContinueButton title="PAY NOW" buttonColor='#1e88e5' width={wp('90%')} screenName="Confirmation" />
             </View>
         );
     }

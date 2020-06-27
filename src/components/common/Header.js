@@ -7,12 +7,14 @@ import {
 } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
-export default class Header extends Component {
+class Header extends Component {
     render() {
+        const {navigation} = this.props;
         return (
             <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: wp('3%'), marginVertical: hp('2%') }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.goBack()} >
                     <Icon
                         name="arrowleft"
                         color="#000"
@@ -28,6 +30,13 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
     Header: {
         marginHorizontal: wp('4%'),
-        fontSize: 24
+        fontSize: 24,
+        fontWeight: "bold"
     }
 });
+
+export default function ({ header }) {
+    const navigation = useNavigation();
+
+    return <Header header={header} navigation={navigation} />;
+}

@@ -3,11 +3,13 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-nativ
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Card, Image, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
 
-export default class PayButton extends Component {
+class PayButton extends Component {
     render() {
+        const { navigation } = this.props;
         return(
-            <TouchableOpacity style={styles.btn} >
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.push(this.props.screenName)} >
                 <View style={{ flexDirection: "row", marginVertical: hp('2%'), marginHorizontal: wp('8%'), alignItems:"center" }}>
                     <View style={{ flex: 1, alignItems: "flex-start" }}>
                         <View style={{ alignItems: "center" }}>
@@ -37,3 +39,9 @@ const styles=StyleSheet.create({
         justifyContent:"center",
     }
 });
+
+export default function () {
+    const navigation = useNavigation();
+
+    return <PayButton screenName="Payment" navigation={navigation} />;
+}

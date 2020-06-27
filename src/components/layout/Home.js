@@ -25,7 +25,7 @@ export default class Home extends Component {
                     <ShoppingList title="Category" option="Show more" imageUrl={require('../../assets/Image_3.png')} />
                     {/* <Title TitleText="Category" TitleTextLink="Show more" /> */}
                 </ScrollView>
-                <BottomNavigation option3="Orders" icon3="chart-line" icon="qrcode-scan" />
+                <BottomNavigation option3="Orders" icon3="chart-line" icon="qrcode-scan" navigation="QRScanner" />
             </View>
         );
     }
