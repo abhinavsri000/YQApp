@@ -7,7 +7,7 @@ import { Overlay } from 'react-native-elements';
 import CustomButton from '../LoginAccessComp/Button';
 import { Button } from 'react-native-elements';
 
-export default function CustomOverlay({ title, image, image_height, image_width }) {
+export default function CustomOverlay({ store, image, image_height, image_width }) {
         const [visible, setVisible] = useState(true);
 
         const toggleOverlay = () => {
@@ -27,27 +27,12 @@ export default function CustomOverlay({ title, image, image_height, image_width 
                     fontSize: 25,
                     fontWeight: "bold"
                 }}>
-                    Welcome to {title}
+                    Welcome to {store}
                 </Text>
-                {/* <CustomButton title="Continue" length={110} size={35} onPress={setVisible(!visible)} /> */}
-                <Button
-                    raised
+                <CustomButton
                     title="Continue"
-                    titleStyle={{
-                        fontSize: 18,
-                        color: '#ffffff'
-                    }}
-                    containerStyle={{
-                        alignSelf: 'center',
-                        marginVertical: '2%',
-                        width: 110,
-                        marginHorizontal: '2%'
-                    }}
-                    buttonStyle={{
-                        height: 35 ,
-                        backgroundColor: '#5663ff',
-                        borderRadius: 25
-                    }}
+                    length={110}
+                    size={35}
                     onPress={toggleOverlay} />
             </Overlay>
         );

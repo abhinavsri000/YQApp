@@ -55,29 +55,29 @@ export default class SampleList extends Component {
                         <ItemHead itemtype="Fruits" quantity="03" />
                         <ItemTab
                             image={require("../../assets/Image_9.webp")}
-                            itemname="Banana"
-                            itemprice="$7/kg"
-                            itemweight="500"
+                            itemName="Banana"
+                            itemPrice="$7/kg"
+                            itemWeight="500"
                             badge={1}
                             discount="10%" />
                         <ItemTab
                             image={require("../../assets/Image_9.webp")}
-                            itemname="Banana"
-                            itemprice="$7/kg"
-                            itemweight="500" />
+                            itemName="Banana"
+                            itemPrice="$7/kg"
+                            itemWeight="500" />
                         <ItemHead itemtype="Fruits" quantity="03" />
                         <ItemTab
                             image={require("../../assets/Image_9.webp")}
-                            itemname="Banana"
-                            itemprice="$7/kg"
-                            itemweight="500"
+                            itemName="Banana"
+                            itemPrice="$7/kg"
+                            itemWeight="500"
                             badge={1}
                             discount="10%" />
                         <ItemTab
                             image={require("../../assets/Image_9.webp")}
-                            itemname="Banana"
-                            itemprice="$7/kg"
-                            itemweight="500" />
+                            itemName="Banana"
+                            itemPrice="$7/kg"
+                            itemWeight="500" />
                         <Text>{" "}</Text>
                         <Text>{" "}</Text>
                         <Text>{" "}</Text>

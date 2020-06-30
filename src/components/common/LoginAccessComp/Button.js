@@ -3,11 +3,6 @@ import { Button } from 'react-native-elements';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 export default function CustomButton({ title, titlesize, size, titlecolor, length, buttoncolor, onPress }) {
-        // const [visible, setVisible] = useState(true);
-
-        // const toggleOverlay = () => {
-        //     setVisible(!visible);
-        // };
         return (
             <Button
                 raised
@@ -27,7 +22,7 @@ export default function CustomButton({ title, titlesize, size, titlecolor, lengt
                     backgroundColor: buttoncolor || '#5663ff',
                     borderRadius: 25
                 }}
-                onPress={() => onPress } />
+                onPress={onPress} />
         );
     
 }
