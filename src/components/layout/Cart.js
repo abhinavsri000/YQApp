@@ -22,7 +22,7 @@ export default class Cart extends Component {
                     <CartCard productName="Smart Home Speaker" price="3500" discount="10% off" />
                 </ScrollView>
                 <View style={{ justifyContent: "center", alignItems:"center"}} >
-                    <ContinueButton title="CHECKOUT" buttonColor='#1565c0' width={wp('90%')} />
+                    <ContinueButton title="CHECKOUT" buttonColor='#1565c0' width={wp('90%')} screenName="Checkout" />
                 </View>
             </View>
         );

@@ -30,7 +30,7 @@ export default class BottomNavigation extends Component {
                         <Text style={{ color: '#bdbdbd' }}>Todo</Text>
                     </View>
                 </View>
-                <FloatButton icon={this.props.icon} />
+                <FloatButton icon={this.props.icon} screenName={this.props.navigation} />
                 <CenterSemicircle />
                 <View style={[styles.common, styles.Filler_1]}></View>
                 <View style={[styles.common, styles.Filler_2]}></View>

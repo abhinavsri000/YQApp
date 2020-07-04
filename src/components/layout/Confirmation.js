@@ -33,7 +33,9 @@ export default class Confirmation extends Component {
                 <GradientButton
                     title="View or Download Invoice"
                     startcolor='#667eea'
-                    endcolor='#65b6ff' />
+                    endcolor='#65b6ff'
+                    screenName="Receipt"
+                />
                 <GradientButton
                     title="Back to Home"
                     startcolor='#667eea'
