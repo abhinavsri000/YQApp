@@ -14,7 +14,7 @@ export default class FloatButton extends Component {
         // const navigation = useNavigation();
         return (
             <View style={{
-                // position: 'absolute',
+                position: 'absolute',
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: hp('8%'),

@@ -44,7 +44,7 @@ export default class BBHome extends Component {
                 <BottomNavigation option3="Cart" icon3="cart-outline" icon="qrcode-scan" />
                 <CustomOverlay
                     image={require("../../assets/Image_8.jpg")}
-                    title="Big Bazaar" />
+                    store="Big Bazaar" />
             </View>
         );
     }

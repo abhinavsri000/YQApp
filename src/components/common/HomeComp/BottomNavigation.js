@@ -14,7 +14,8 @@ export default class BottomNavigation extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={[styles.Container, { borderTopRightRadius: 10 }]}>
+                {/*}<View style={[styles.Container, { borderTopRightRadius: 10 }]}>*/}
+                <View style={styles.Container}>
                     <View style={ styles.ContainerItems }>
                         <Icon
                             name='home'
@@ -30,8 +31,8 @@ export default class BottomNavigation extends Component {
                         <Text style={{ color: '#bdbdbd' }}>Todo</Text>
                     </View>
                 </View>
-                <FloatButton icon={this.props.icon} screenName={this.props.navigation} />
-                <CenterSemicircle />
+
+                {/*<CenterSemicircle />
                 <View style={[styles.common, styles.Filler_1]}></View>
                 <View style={[styles.common, styles.Filler_2]}></View>
                 <View style={[styles.common, styles.Filler_3]}></View>
@@ -40,10 +41,15 @@ export default class BottomNavigation extends Component {
                 <View style={[styles.common, styles.Filler_4]}></View>
                 <View style={[styles.common, styles.Filler_3]}></View>
                 <View style={[styles.common, styles.Filler_2]}></View>
-                <View style={[styles.common, styles.Filler_1]}></View>
+                <View style={[styles.common, styles.Filler_1]}></View>*/}
 
-                
-                <View style={[styles.Container, { borderTopLeftRadius: 10 }]}>
+                <View style={styles.center} />
+
+                <FloatButton icon={this.props.icon} />
+
+
+                {/*<View style={[styles.Container, { borderTopLeftRadius: 10 }]}>*/}
+                <View style={styles.Container}>
                     <View style={ styles.ContainerItems }>
                         <Icon
                             name={this.props.icon3}
@@ -93,6 +99,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
+    center: {
+        backgroundColor: '#ffffff',
+        width: '18%',
+        elevation: 100
+    },
+
     common: {
         backgroundColor: '#ffffff',
         elevation: 100
@@ -115,7 +127,7 @@ const styles = StyleSheet.create({
         height: hp('5.18%'),
         marginTop: hp('2.85%')
     },
-    
+
     Filler_4: {
         width: wp('3.7%'),
         height: hp('4.25%'),
