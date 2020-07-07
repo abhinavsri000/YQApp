@@ -1,29 +1,34 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import Login from '../../components/layout/Login';
-import Splash from '../../components/layout/Splash';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import QRScanner from '../../components/layout/QRScanner';
+import Icon from 'react-native-vector-icons/AntDesign';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import BBHome from '../../components/layout/BBHome';
+import Home from '../../components/layout/Home';
+import Cart from '../../components/layout/Cart';
 export function Tabs() {
     return (
       <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          if (route.name === 'QRScanner') {
+          if (route.name === 'Home') {
             return (
               <Icon name='home' size={size} color={color}/>
               );
           } else if (route.name === 'Cart') {
             return (
-              <Icon name='cart' size={size} color={color}/>
+              <Icon name='shoppingcart' size={size} color={color}/>
+            );
+          }
+          else if (route.name === 'Scanner') {
+            return (
+              <Icon name='scan1' size={size} color={color}/>
             );
           }
         },
       })}
       tabBarOptions={{
         activeTintColor: 'blue',
-        inactiveTintColor: 'gray',
+        inactiveTintColor: 'skyblue',
         style: {
           height: hp('9%'),
           backgroundColor: '#FFFFFF',
@@ -36,9 +41,9 @@ export function Tabs() {
         },
       }}
       >
-        <Tab.screen name="Home" component={BBHome}/>
-        <Tab.Screen name="Cart" component={Splash} />
-        <Tab.Screen name="QRScanner" component={Login} />
+        <Tab.Screen name="Home" component={Home}/>
+        <Tab.Screen name="Scanner" component={QRScanner} />
+        <Tab.Screen name="Cart" component={Cart} />
       </Tab.Navigator>
     );
   }
