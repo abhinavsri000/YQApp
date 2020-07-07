@@ -9,6 +9,9 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import GradientButton from '../common/GradientButton';
 
 export default class MyOrders extends Component {
+    constructor({navigation}){
+        super({navigation})
+    }
     render() {
         return (
             <Card containerStyle={{ padding: 5, elevation: 3, marginTop: hp('0.5%') }}>

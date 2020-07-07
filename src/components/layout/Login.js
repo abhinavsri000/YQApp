@@ -5,6 +5,9 @@ import {RegisterHeader, RegisterCard, Form,CommonButton,RegisterFooter} from '..
 
 
 class Login extends Component {
+  constructor({navigation}){
+    super({navigation})
+  }
   render() {
     return (
       <ScrollView>

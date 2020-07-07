@@ -8,6 +8,9 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import OrderCard from '../common/OrderCard';
 
 export default class MyOrders extends Component {
+    constructor({navigaton}){
+        super({navigation})
+    }
     render() {
         return(
             <View>

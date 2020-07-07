@@ -1,10 +1,10 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import QRScanner  from "../../components/layout/QRScanner";
-import Cart from "../../components/layout/Cart";
+import Login from '../../components/layout/Login';
+import Splash from '../../components/layout/Splash';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-
+import BBHome from '../../components/layout/BBHome';
 export function Tabs() {
     return (
       <Tab.Navigator
@@ -36,8 +36,9 @@ export function Tabs() {
         },
       }}
       >
-        <Tab.Screen name="Cart" component={Cart} />
-        <Tab.Screen name="QRScanner" component={QRScanner} />
+        <Tab.screen name="Home" component={BBHome}/>
+        <Tab.Screen name="Cart" component={Splash} />
+        <Tab.Screen name="QRScanner" component={Login} />
       </Tab.Navigator>
     );
   }

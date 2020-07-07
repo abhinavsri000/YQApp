@@ -6,7 +6,7 @@ import {
     ScrollView
 } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-
+import { NavigationContainer } from '@react-navigation/native';
 import Search from '../common/HomeComp/SearchBar';
 import Carousel from '../common/BBHomeComp/Carousel';
 import Categories from '../common/BBHomeComp/Categories';
@@ -14,7 +14,7 @@ import Title from '../common/HomeComp/Title';
 import ProductImage from '../common/BBHomeComp/ProductImage';
 import BottomNavigation from '../common/HomeComp/BottomNavigation';
 import CustomOverlay from '../common/BBHomeComp/Overlay';
-
+import {Tabs} from '../../navigation/navigators/BottomTabNavigator';
 export default class BBHome extends Component {
     render() {
         return (
@@ -41,10 +41,11 @@ export default class BBHome extends Component {
                         <Text>{" "}</Text>
                     </View>
                 </ScrollView>
+                
                 <BottomNavigation option3="Cart" icon3="cart-outline" icon="qrcode-scan" />
-                <CustomOverlay
+                {/* <CustomOverlay
                     image={require("../../assets/Image_8.jpg")}
-                    store="Big Bazaar" />
+                    store="Big Bazaar" /> */}
             </View>
         );
     }
