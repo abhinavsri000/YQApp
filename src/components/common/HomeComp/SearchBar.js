@@ -45,9 +45,7 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'flex-start',
         alignItems: 'center',
-        marginVertical: 20
     },
-
     SearchContainer: {
         height: 45,
         backgroundColor: '#ffffff',

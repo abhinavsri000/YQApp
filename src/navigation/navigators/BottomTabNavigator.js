@@ -16,7 +16,7 @@ export function Tabs() {
               );
           } else if (route.name === 'Cart') {
             return (
-              <Icon name='shoppingcart' size={size} color={color}/>
+              <Icon  name='shoppingcart' size={size} color={color}/>
             );
           }
           else if (route.name === 'Scanner') {
@@ -25,14 +25,16 @@ export function Tabs() {
             );
           }
         },
-      })}
+      }
+      )}
       tabBarOptions={{
-        activeTintColor: 'blue',
-        inactiveTintColor: 'skyblue',
+        activeTintColor: '#121278',
+        inactiveTintColor: '#0078d4',
         style: {
-          height: hp('9%'),
+          height: hp('8%'),
+          paddingTop:hp('1%'),
           backgroundColor: '#FFFFFF',
-          borderTopWidth: 0.5,
+          borderTopWidth: 0,
           shadowOffset: {width: 5, height: 3},
           shadowColor: 'black',
           shadowOpacity: 0.5,
@@ -41,9 +43,9 @@ export function Tabs() {
         },
       }}
       >
-        <Tab.Screen name="Home" component={Home}/>
-        <Tab.Screen name="Scanner" component={QRScanner} />
-        <Tab.Screen name="Cart" component={Cart} />
+        <Tab.Screen name="Home" component={Home} options={{title:'Home'}}/>
+        <Tab.Screen name="Scanner" component={QRScanner} options={{title:'Scan'}} />
+        <Tab.Screen name="Cart" component={Cart} options={{title:'Cart'}} />
       </Tab.Navigator>
     );
   }

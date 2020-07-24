@@ -9,13 +9,14 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import CartCard from '../common/CartComp/CartCard';
 import SearchBar from '../common/HomeComp/SearchBar';
 import ContinueButton from '../common/QRScannerComp/ContinueButton';
+import HeaderCard from '../common/HeaderCard';
 
 export default class Cart extends Component {
     render() {
         return(
             <View style={{flex:1}}>
-                
-                <SearchBar placeholder="Search cart" />
+                <HeaderCard Comp={<Text style={{fontWeight:'bold',fontSize:16}}>Cart</Text>}/>
+        {/*         <SearchBar placeholder="Search cart" /> */}
                 <Text style={styles.title}>Cart</Text>
                 <ScrollView contentContainerStyle={{ paddingBottom: hp('20%'), marginTop: hp('2%') }}>
                     <CartCard productName="Kedo Running Shoes" company="from Adidas" price="7000" discount="30% off" />

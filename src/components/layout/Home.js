@@ -1,40 +1,41 @@
-import React, { Component } from 'react';
-import {
-    StyleSheet,
-    View,
-    ScrollView
-} from 'react-native';
-
-import Search from '../common/HomeComp/SearchBar'
-import Title from '../common/HomeComp/Title'
-import TrendingOffers from '../common/HomeComp/TrendingOffers'
-import ShoppingList from '../common/HomeComp/ShoppingList'
+import React, {Component} from 'react';
+import {StyleSheet, View, Text, Image,Button} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
+import Search from '../common/HomeComp/SearchBar';
+import Title from '../common/HomeComp/Title';
+import TrendingOffers from '../common/HomeComp/TrendingOffers';
+import ShoppingList from '../common/HomeComp/ShoppingList';
 import BottomNavigation from '../common/HomeComp/BottomNavigation';
+import HeaderCard from '../common/HeaderCard';
 
+/* can a component return another component */
 export default class Home extends Component {
-    render() {
-        return (
-            <View style={styles.container} >
-                <Search placeholder="Search Stores"/>
-                <ScrollView>
-                    {/* <Title TitleText="Trending Offers" TitleTextLink="See all" /> */}
-                    {/* <TrendingOffers /> */}
-                    {/* <Title TitleText="Shopping List" TitleTextLink="+Add List" /> */}
-                    <ShoppingList title="Trending Offers" option="See all(45)" imageUrl={require('../../assets/Image_1.png')} />
-                    <ShoppingList title="Shopping List" option="+Add List" imageUrl={require('../../assets/Image_3.png')} />
-                    <ShoppingList title="Category" option="Show more" imageUrl={require('../../assets/Image_3.png')} />
-                    {/* <Title TitleText="Category" TitleTextLink="Show more" /> */}
-                </ScrollView>
-            </View>
-        );
-    }
+  render() {
+    return (
+      <View>
+        <HeaderCard Comp = {<Image 
+                   source = {require('../../assets/Y(2).png')}
+                   style = {{
+                     width: 40,
+                     height: 40,
+                   }}/>}/>
+      </View>
+    );
+  }
 }
+ const styles= StyleSheet.create(
+   {
+     card:{
+       flex:1,
+       backgroundColor:'red',
+       borderWidth:1,
+       borderColor: 'red',
+       padding:0,
+       borderRadius:4,
+       margin:10,
+       width:50,
+       height:100,
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fbfbfb',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-});
+     }
+   }
+ );
